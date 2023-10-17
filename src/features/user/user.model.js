@@ -5,14 +5,17 @@ export default class UserModel{
         this.password=password;
         this.type=type;
     }
-    static SignUp(name,email,password,type){
+    static signUp(name,email,password,type){
         const newUser=new UserModel(name,email,password,type);
         users.push(newUser);
         return newUser;
     }
-    static SignIn(email,password){
+    static signIn(email,password){
         const result=users.find((user)=>user.email==email && user.password==password);
         return result;
+    }
+    static getAll(){
+        return users;
     }
 }
 var users=[
