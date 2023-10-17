@@ -11,6 +11,9 @@ const productController = new ProductController();
 
 // All the paths to the controller methods.
 // localhost/api/products 
+
+productRouter.get("/filter", productController.filterProducts);
+
 productRouter.get(
     '/', 
 productController.getAllProducts
