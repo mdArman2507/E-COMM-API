@@ -2,7 +2,7 @@ import  jwt from 'jsonwebtoken';
 const jwtAuth = (req, res, next)=>{
     // 1. Read the token.
     var token = req.headers['authorization'];
-     token = token.substring(7);
+    //  token = token.substring(7);
     // 2. if no token, return the error.
     if(!token){
         return res.status(401).send('Unauthorized');
