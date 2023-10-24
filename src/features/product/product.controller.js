@@ -50,7 +50,6 @@ export default class ProductController{
         } catch (err) {
             return res.status(400).send(err);
         }
-          console.log(error);
             return res.status(200).send('Rating has been added');
       }     
 
