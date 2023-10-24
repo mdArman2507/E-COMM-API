@@ -1,0 +1,16 @@
+import fs from 'fs';
+const fsPromise=fs.promises;
+async function log(logData){
+    try {
+        logData=new Date().toString()+'. Log Data:'+logData;
+     await fsPromise.writeFile('log.txt',logData);   
+    } catch (err) {
+        console.log(err);
+    }
+}
+const loggerMiddleWare=async(req,res,next)=>{
+    // 1. Log request body
+    await log(req.body);
+    next();
+}
+export default loggerMiddleWare;
