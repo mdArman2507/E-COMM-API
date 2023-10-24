@@ -8,6 +8,7 @@ import cartRouter from './src/features/cartItems/cartItems.routes.js';
 import swagger from 'swagger-ui-express';
 import apiDocs from './swagger.json' assert {type:'json'};
 import loggerMiddleWare from './src/middlewares/logger.middleware.js';
+import ApplicationError from './src/error-handler/ApplicationError.js';
 // 2. Create Server
 const server=express();
 
@@ -31,7 +32,13 @@ server.get('/',(req,res)=>{
 //  Error handling middleware
 server.use((err,req,res,next)=>{
     console.log(err);
-    res.status(503).send('something went wrong plz try later');
+    if(err instanceof ApplicationError)
+    {
+        res.status(err.code).send(err.message);
+    }
+
+    // server error
+    res.status(500).send('something went wrong plz try later');
 });
 
 // 4. Middleware to handle 404 requests.

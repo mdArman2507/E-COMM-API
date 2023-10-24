@@ -36,7 +36,7 @@ export default class ProductController{
             return res.status(200).send(product);
         }
     }
-    rateProduct(req, res) {
+    rateProduct(req, res,next) {
         console.log(req.query);
         const userID = req.query.userID;
         const productID = req.query.productID;
@@ -47,10 +47,11 @@ export default class ProductController{
                 productID, 
                 rating
                 );            
-        } catch (err) {
-            return res.status(400).send(err);
-        }
             return res.status(200).send('Rating has been added');
+        } catch(err){
+            console.log("Passing error to middleware");
+            next(err);
+          }
       }     
 
 }
