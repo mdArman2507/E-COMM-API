@@ -9,6 +9,7 @@ import swagger from 'swagger-ui-express';
 import apiDocs from './swagger.json' assert {type:'json'};
 import loggerMiddleWare from './src/middlewares/logger.middleware.js';
 import ApplicationError from './src/error-handler/ApplicationError.js';
+import connectToMongoDB from './src/config/mongodb.js';
 // 2. Create Server
 const server=express();
 
@@ -49,4 +50,5 @@ server.use((req,res)=>{
 // 5. specify port.
 server.listen(3200,()=>{
     console.log("server is running at 3200");
+    connectToMongoDB();
 });
