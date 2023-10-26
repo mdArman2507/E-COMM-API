@@ -17,8 +17,23 @@ class UserRepository{
             throw new ApplicationError("something went wrong with database",500);
         }
     }
+    
+    async signIn(email, password) {
+        try{
+          // 1. Get the database
+        const db = getDB();
+        // 2. Get the collection
+        const collection = db.collection("users");
+        
+        // 3. Find the document.
+        return await collection.findOne({email, password});
+        } catch(err){
+          console.log(err);
+          throw new ApplicationError("Something went wrong with database", 500);
+        }
+      }
 
-    async signIn(email,password){
+    async findByEmail(email){
         try{
             // 1. Get the database
             const db=getDB();
@@ -26,7 +41,7 @@ class UserRepository{
             const collection=db.collection("users");
 
             // 3. Find the document.
-            return await collection.findOne({email,password});
+            return await collection.findOne({email});
         }catch(err){
             console.log(err);
             throw new ApplicationError("Something went wrong with database",500);

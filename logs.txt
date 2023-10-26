@@ -34,3 +34,7 @@
 {"level":"info","message":"/api/users/signup-{\"name\":\"tarana\",\"email\":\"tarana@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
 {"level":"info","message":"/api/users/signup-{\"name\":\"tarana\",\"email\":\"tarana@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
 {"level":"info","message":"/api/users/signup-{\"name\":\"tarana\",\"email\":\"tarana@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"tarana\",\"email\":\"tarana@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"tarana\",\"email\":\"tarana@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"tarana\",\"email\":\"tarana@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"md Arman\",\"email\":\"mdarman@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
