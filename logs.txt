@@ -23,3 +23,14 @@
 {"level":"info","message":"/api/products/rate?userID=10&productID=1&rating=90-{}","service":"request-login"}
 {"level":"info","message":"/api/products/rate?userID=10&productID=1&rating=90-{}","service":"request-login"}
 {"level":"info","message":"/api/products/rate?userID=1&productID=10&rating=90-{}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"Md Arman\",\"email\":\"mdarman@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"Md Arman\",\"email\":\"mdarman@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"Md Arman\",\"email\":\"mdarman@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"Md Arman\",\"email\":\"mdarman@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"Md Arman\",\"email\":\"mdarman@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"Md\",\"email\":\"md@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"Md\",\"email\":\"md@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"tarana\",\"email\":\"tarana@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"tarana\",\"email\":\"tarana@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"tarana\",\"email\":\"tarana@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"tarana\",\"email\":\"tarana@gmail.com\",\"password\":\"password1\",\"type\":\"seller\"}","service":"request-login"}
