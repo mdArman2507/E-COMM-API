@@ -16,12 +16,15 @@ productRouter.get("/filter", productController.filterProducts);
 
 productRouter.get(
     '/', 
-productController.getAllProducts
+    (req,res)=>{
+productController.getAllProducts(req,res)
+}
 );
 productRouter.post(
     '/', 
 upload.single('imageUrl'), 
-productController.addProduct
+(req,res)=>{
+productController.addProduct(req,res)}
 );
 productRouter.get(
     '/:id',
