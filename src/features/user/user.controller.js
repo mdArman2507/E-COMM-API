@@ -30,8 +30,8 @@ export default class UserController{
             // 1 Create Token
             const token=jwt.sign(
                 {
-                    userID:result.id,
-                    email:result.email,
+                    userID:user._id,
+                    email:user.email,
                 },
                 process.env.JWT_SECRET,
                 {
@@ -43,7 +43,7 @@ export default class UserController{
             return res.status(200).send(token)
             }
             else{
-                console.log("email not password");
+                console.log("email not found");
                 return res.status(400).send('Incorrect credentials'); 
             }
         }
