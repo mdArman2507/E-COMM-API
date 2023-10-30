@@ -47,3 +47,9 @@
 {"level":"info","message":"/api/products-{}","service":"request-login"}
 {"level":"info","message":"/api/products-{}","service":"request-login"}
 {"level":"info","message":"/api/products-{}","service":"request-login"}
+{"level":"info","message":"/api/cartItems-{\"productID\":\"653b57e055168a0b84e07746\",\"quantity\":2}","service":"request-login"}
+{"level":"info","message":"/api/cartItems-{\"productID\":\"653b57e055168a0b84e07746\",\"quantity\":4}","service":"request-login"}
+{"level":"info","message":"/api/cartItems-{\"productID\":\"653b57e055168a0b84e07746\",\"quantity\":4}","service":"request-login"}
+{"level":"info","message":"/api/cartItems-{\"productID\":\"653b57e055168a0b84e07746\",\"quantity\":9}","service":"request-login"}
+{"level":"info","message":"/api/cartItems-{\"productID\":\"653b57e055168a0b84e07746\",\"quantity\":9}","service":"request-login"}
+{"level":"info","message":"/api/cartItems-{\"productID\":\"653b57e055168a0b84e07746\",\"quantity\":9}","service":"request-login"}
