@@ -11,8 +11,12 @@ export default class CartItemsRepository{
         try{
         const db = getDB();
         const collection = db.collection(this.collection);
+        const id=await this.getNextCounter(db);
         await collection.updateOne({productID: new ObjectId(productID), userID: new ObjectId(userID)},
-        {$inc:{quantity:quantity}},
+        {
+            $setOnInsert:{_id:id},
+            $inc:{quantity:quantity}
+        },
         {upsert:true}) 
         }catch(err){
             console.log(err);
@@ -41,5 +45,15 @@ export default class CartItemsRepository{
             console.log(err);
             throw new ApplicationError("Something went wrong with database", 500);
         }
+    }
+
+    async getNextCounter(db){
+        const resultDocument=await db.collection("counters").findOneAndUpdate(
+            {_id:'cartItemID'},
+            {$inc:{value:1}},
+            {returnDocument:'after'}
+        )
+        console.log(resultDocument);
+        return resultDocument.value;
     }
 }
