@@ -23,7 +23,7 @@ export default class UserController {
     }
   }
 
-  async signUp(req, res) {
+  async signUp(req, res,next) {
     const {
       name,
       email,
@@ -31,16 +31,20 @@ export default class UserController {
       type,
     } = req.body;
 
-    const hashedPassword = await bcrypt.hash(password, 12)
+    try{
+    // const hashedPassword = await bcrypt.hash(password, 12)
     const user = new UserModel(
       name,
       email,
-      hashedPassword,
+      password,
       type
     );
     await this.userRepository.signUp(user);
     res.status(201).send(user);
+  }catch(err){
+    next(err);
   }
+}
 
   async signIn(req, res, next) {
     try{

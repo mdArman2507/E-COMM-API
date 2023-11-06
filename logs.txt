@@ -65,3 +65,6 @@
 {"level":"info","message":"/api/cartItems-{\"productID\":\"653b58522f8a166ffbedac3e\",\"quantity\":9}","service":"request-login"}
 {"level":"info","message":"/api/cartItems-{\"productID\":\"653b58522f8a166ffbedac3e\",\"quantity\":9}","service":"request-login"}
 {"level":"info","message":"/api/cartItems-{\"productID\":\"653b57e055168a0b84e07746\",\"quantity\":9}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"md arman1\",\"email\":\"mdarman1@gmail.com\",\"password\":\"Arman@123\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"md arman1\",\"email\":\"mdarman1@gmail.com\",\"password\":\"Arman\"}","service":"request-login"}
+{"level":"info","message":"/api/users/signup-{\"name\":\"md arman1\",\"email\":\"mdarman1@gmail.com\",\"password\":\"Arman\"}","service":"request-login"}
