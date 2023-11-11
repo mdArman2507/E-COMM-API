@@ -12,8 +12,8 @@ const userController = new UserController();
 
 // All the paths to controller methods.
 
-userRouter.post('/signup', (req, res,next)=>{
-    userController.signUp(req, res,next)
+userRouter.post('/signup', (req, res, next)=>{
+    userController.signUp(req, res, next)
 });
 userRouter.post('/signin', (req, res)=>{
     userController.signIn(req, res)
@@ -21,6 +21,5 @@ userRouter.post('/signin', (req, res)=>{
 userRouter.put('/resetPassword', jwtAuth, (req, res, next)=>{
     userController.resetPassword(req, res, next)
 });
-
 
 export default userRouter;
