@@ -16,11 +16,15 @@ class ProductRepository{
 
     async add(newProduct){
         try{
-            // 1. Get the db.
-            const db = getDB();
-            const collection = db.collection(this.collection);
-            await collection.insertOne(newProduct);
-            return newProduct
+            // 1. Adding Product
+            const newProduct = new ProductModel(productData);
+            const savedProduct = await newProduct.save();
+
+            // 2. Update categories.
+            await CategoryModel.updateMany(
+                {_id: {$in: productData.categories}},
+                {$push: {products: new ObjectId(savedProduct._id)}}
+            )
         }catch(err){
             console.log(err);
             throw new ApplicationError("Something went wrong with database", 500);    
